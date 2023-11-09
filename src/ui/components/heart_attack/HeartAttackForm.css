@@ -1,0 +1,12 @@
+.heart-attack-form-container {
+  background-color: #b59a9a;
+  display: flex;
+  align-self: center;
+  padding: 5%;
+}
+
+.heart-attack-form-container-container {
+  display: flex;
+  align-self: center;
+  padding: 10%;
+}
