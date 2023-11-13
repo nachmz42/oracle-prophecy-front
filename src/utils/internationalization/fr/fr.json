@@ -1,0 +1,50 @@
+{
+  "buttons": {
+    "back_home": "Retour à la maison",
+    "go_to": "Aller à",
+    "language": "Langue",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "reset": "Réinitialiser",
+    "submit": "Envoyer"
+  },
+  "errors": {
+    "unexpected_error": "Oups, une erreur inattendue s'est produite"
+  },
+  "heart_attack": {
+    "gender": "Genre",
+    "gender_placeholder": "Veuillez sélectionner votre genre",
+    "male": "Masculin",
+    "female": "Féminin",
+    "diet": "Régime",
+    "diet_placeholder": "Veuillez sélectionner votre type de régime",
+    "unhealthy": "Malsain",
+    "average": "Moyen",
+    "healthy": "Sain",
+    "age": "Âge",
+    "age_placeholder": "Veuillez insérer votre âge",
+    "cholesterol_level": "Niveau de cholestérol",
+    "cholesterol_level_placegolder": "Veuillez insérer votre niveau de cholestérol",
+    "heart_rate": "Fréquence cardiaque moyenne",
+    "heart_rate_placeholder": "Veuillez insérer votre fréquence cardiaque moyenne",
+    "alcohol_consumption": "Consommation moyenne d'alcool par semaine",
+    "alcohol_consumption_placeholder": "Veuillez insérer votre consommation moyenne d'alcool par semaine",
+    "exercise": "Heures d'exercice par semaine",
+    "exercise_placeholder": "Veuillez insérer vos heures moyennes d'exercice par semaine",
+    "stress_level": "Niveau moyen de stress",
+    "stress_level_placeholder": "Veuillez insérer votre niveau moyen de stress",
+    "sedentary": "Heures sédentaires par semaine",
+    "sedentary_placeholder": "Veuillez insérer vos heures sédentaires par semaine",
+    "bmi": "IMC",
+    "bmi_placeholder": "Veuillez insérer votre IMC",
+    "triglycerides": "Triglycérides",
+    "triglycerides_placeholder": "Veuillez insérer votre niveau de triglycérides",
+    "physical_days": "Jours d'activité physique par semaine",
+    "physical_days_placeholder": "Veuillez insérer vos jours d'activité physique par semaine",
+    "sleep_per_day": "Heures de sommeil par jour",
+    "sleep_per_day_placeholder": "Veuillez insérer vos heures de sommeil par jour"
+  },
+  "titles": {
+    "heart_attack": "Crise cardiaque"
+  }
+}

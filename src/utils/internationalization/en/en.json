@@ -1,0 +1,49 @@
+{
+  "buttons": {
+    "back_home": "Back to home",
+    "go_to": "Go to",
+    "language": "Language",
+    "next": "Next",
+    "previous": "Previous",
+    "reset": "Reset",
+    "submit": "Submit"
+  },
+  "errors": {
+    "unexpected_error": "Oops an unexpected error occurred"
+  },
+  "heart_attack": {
+    "age": "Age",
+    "age_placeholder": "Please insert your age",
+    "alcohol_consumption": "Average alcohol consumption per week",
+    "alcohol_consumption_placeholder": "Please insert your average alcohol consumption per week",
+    "bmi": "BMI",
+    "bmi_placeholder": "Please insert your BMI",
+    "cholesterol_level": "Cholesterol level",
+    "cholesterol_level_placegolder": "Please insert your cholesterol level",
+    "diet": "Diet",
+    "diet_placeholder": "Please select your type of diet",
+    "exercise": "Exercise hours per week",
+    "exercise_placeholder": "Please insert your average exercise hours per week",
+    "female": "Female",
+    "gender": "Gender",
+    "gender_placeholder": "Please select your gender",
+    "healthy": "Healthy",
+    "heart_rate": "Average heart rate",
+    "heart_rate_placeholder": "Please insert your average heart rate",
+    "male": "Male",
+    "physical_days": "Physical activity days per week",
+    "physical_days_placeholder": "Please insert your physical activity days per week",
+    "sedentary": "Sedentary hours per week",
+    "sedentary_placeholder": "Please insert your sedentary hours per week",
+    "sleep_per_day": "Sleep hours per day",
+    "sleep_per_day_placeholder": "Please insert your sleep hours per day",
+    "stress_level": "Average stress level",
+    "stress_level_placeholder": "Please insert your average stress level",
+    "triglycerides": "Triglycerides",
+    "triglycerides_placeholder": "Please insert your triglycerides level",
+    "unhealthy": "Unhealthy"
+  },
+  "titles": {
+    "heart_attack": "Heart attack"
+  }
+}

@@ -4,6 +4,6 @@ import HeartAttackRegistry from "./HeartAttackRegistry";
 
 export const predict = async (heartAttackData: HeartAttackDomain) => {
   const heartAttackRegistry = HeartAttackRegistry(heartAttackData);
-  const res = HeartAttackApi.predict(heartAttackRegistry);
+  const res = await HeartAttackApi.predict(heartAttackRegistry);
   return res;
 };

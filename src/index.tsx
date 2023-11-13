@@ -5,6 +5,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import App from "app/App";
+import { InternationalizationContextProvider } from "infrastructure/providers/InternationalizationContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ChakraProvider>
-      <App />
+      <InternationalizationContextProvider>
+        <App />
+      </InternationalizationContextProvider>
     </ChakraProvider>
   </React.StrictMode>
 );

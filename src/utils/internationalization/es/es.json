@@ -1,0 +1,50 @@
+{
+  "buttons": {
+    "back_home": "Volver a inicio",
+    "go_to": "Ir a",
+    "language": "Idioma",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "reset": "Reiniciar",
+    "submit": "Enviar"
+  },
+  "errors": {
+    "unexpected_error": "Oops, ocurrió un error inesperado"
+  },
+  "heart_attack": {
+    "gender": "Género",
+    "gender_placeholder": "Por favor, selecciona tu género",
+    "male": "Masculino",
+    "female": "Femenino",
+    "diet": "Dieta",
+    "diet_placeholder": "Por favor, selecciona tu tipo de dieta",
+    "unhealthy": "No saludable",
+    "average": "Promedio",
+    "healthy": "Saludable",
+    "age": "Edad",
+    "age_placeholder": "Por favor, ingresa tu edad",
+    "cholesterol_level": "Nivel de colesterol",
+    "cholesterol_level_placegolder": "Por favor, ingresa tu nivel de colesterol",
+    "heart_rate": "Ritmo cardíaco promedio",
+    "heart_rate_placeholder": "Por favor, ingresa tu ritmo cardíaco promedio",
+    "alcohol_consumption": "Consumo promedio de alcohol por semana",
+    "alcohol_consumption_placeholder": "Por favor, ingresa tu consumo promedio de alcohol por semana",
+    "exercise": "Horas de ejercicio por semana",
+    "exercise_placeholder": "Por favor, ingresa tus horas promedio de ejercicio por semana",
+    "stress_level": "Nivel promedio de estrés",
+    "stress_level_placeholder": "Por favor, ingresa tu nivel promedio de estrés",
+    "sedentary": "Horas sedentarias por semana",
+    "sedentary_placeholder": "Por favor, ingresa tus horas sedentarias por semana",
+    "bmi": "Índice de Masa Corporal (IMC)",
+    "bmi_placeholder": "Por favor, ingresa tu IMC",
+    "triglycerides": "Triglicéridos",
+    "triglycerides_placeholder": "Por favor, ingresa tu nivel de triglicéridos",
+    "physical_days": "Días de actividad física por semana",
+    "physical_days_placeholder": "Por favor, ingresa tus días de actividad física por semana",
+    "sleep_per_day": "Horas de sueño por día",
+    "sleep_per_day_placeholder": "Por favor, ingresa tus horas de sueño por día"
+  },
+  "titles": {
+    "heart_attack": "Ataque cardíaco"
+  }
+}
