@@ -1,6 +1,7 @@
 import {
   Button,
-  Center,
+  ButtonGroup,
+  Container,
   Flex,
   FormControl,
   FormHelperText,
@@ -8,6 +9,8 @@ import {
   Icon,
   Input,
   Select,
+  Spacer,
+  VStack,
 } from "@chakra-ui/react";
 import { FormikValues, useFormik } from "formik";
 import "./HeartAttackForm.css";
@@ -17,8 +20,9 @@ import { useState } from "react";
 import { CustomError } from "utils/CustomError";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaHome } from "react-icons/fa";
+import HeartAttackLogo from "../../../infrastructure/assets/HeartAttackLogo.png";
 import PredictionModal from "../commons/PredictionModal/PredictionModal";
+import CustomHeader from "../commons/header/CustomHeader";
 
 function HeartAttackForm() {
   const [error, setError] = useState<CustomError>();
@@ -203,16 +207,12 @@ function HeartAttackForm() {
         title="titles.heart_attack"
         goodOrBad={goodOrBadPrediction}
       ></PredictionModal>
-      <Flex>
-        <Button onClick={backHome} leftIcon={<Icon as={FaHome} />}>
-          {t("buttons.back_home")}
-        </Button>
-      </Flex>
-      <Center className="heart-attack-form-container-container">
-        <Center className="heart-attack-form-container">
-          {" "}
+      <CustomHeader title={"titles.heart_attack"} logo={HeartAttackLogo} />
+      <VStack m={5}>
+        {" "}
+        <Container minWidth="1000px">
           <form>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.gender")}</FormLabel>
               <Select
                 name="sex"
@@ -227,7 +227,7 @@ function HeartAttackForm() {
                 {formik.touched.sex && errors.sex && t(`${errors.sex}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.diet")}</FormLabel>
               <Select
                 name="diet"
@@ -243,7 +243,7 @@ function HeartAttackForm() {
                 {formik.touched.diet && errors.diet && t(`${errors.diet}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.age")}</FormLabel>
               <Input
                 name="age"
@@ -256,7 +256,7 @@ function HeartAttackForm() {
                 {formik.touched.age && errors.age && t(`${errors.age}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.cholesterol_level")}</FormLabel>
               <Input
                 name="cholesterol"
@@ -271,7 +271,7 @@ function HeartAttackForm() {
                   t(`${errors.cholesterol}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.heart_rate")}</FormLabel>
               <Input
                 name="heart_rate"
@@ -286,7 +286,7 @@ function HeartAttackForm() {
                   t(`${errors.heart_rate}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.alcohol_consumption")}</FormLabel>
               <Input
                 name="alcohol_consumption"
@@ -301,7 +301,7 @@ function HeartAttackForm() {
                   t(`${errors.alcohol_consumption}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.exercise")}</FormLabel>
               <Input
                 name="exercise_hours_per_week"
@@ -316,7 +316,7 @@ function HeartAttackForm() {
                   t(`${errors.exercise_hours_per_week}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.stress_level")}</FormLabel>
               <Input
                 name="stress_level"
@@ -331,7 +331,7 @@ function HeartAttackForm() {
                   t(`${errors.stress_level}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.sedentary")}</FormLabel>
               <Input
                 name="sedentary_hours_per_day"
@@ -346,7 +346,7 @@ function HeartAttackForm() {
                   t(`${errors.sedentary_hours_per_day}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.bmi")}</FormLabel>
               <Input
                 name="bmi"
@@ -359,7 +359,7 @@ function HeartAttackForm() {
                 {formik.touched.bmi && errors.bmi && t(`${errors.bmi}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.triglycerides")}</FormLabel>
               <Input
                 name="triglycerides"
@@ -374,7 +374,7 @@ function HeartAttackForm() {
                   t(`${errors.triglycerides}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.physical_days")}</FormLabel>
               <Input
                 name="physical_activity_days_per_week"
@@ -389,7 +389,7 @@ function HeartAttackForm() {
                   t(`${errors.physical_activity_days_per_week}`)}
               </FormHelperText>
             </FormControl>
-            <FormControl>
+            <FormControl className="form-control-input">
               <FormLabel>{t("heart_attack.sleep_per_day")}</FormLabel>
               <Input
                 name="sleep_hours_per_day"
@@ -404,15 +404,23 @@ function HeartAttackForm() {
                   t(`${errors.sleep_hours_per_day}`)}
               </FormHelperText>
             </FormControl>
-            <Button type="button" onClick={() => handleSubmit()}>
-              {t("buttons.submit")}
-            </Button>
-            <Button type="button" onClick={() => resetForm()}>
-              {t("buttons.reset")}
-            </Button>
+            <Flex justifyContent={"flex-end"}>
+              <ButtonGroup>
+                <Button
+                  type="button"
+                  colorScheme="teal"
+                  onClick={() => handleSubmit()}
+                >
+                  {t("buttons.submit")}
+                </Button>
+                <Button type="button" onClick={() => resetForm()}>
+                  {t("buttons.reset")}
+                </Button>
+              </ButtonGroup>
+            </Flex>
           </form>
-        </Center>
-      </Center>
+        </Container>
+      </VStack>
     </>
   );
 }

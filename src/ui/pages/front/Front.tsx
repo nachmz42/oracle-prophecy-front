@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Button, Center, Container, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import SampleImage from "../../../infrastructure/assets/Sample1.png";
+import HeartAttackLogo from "../../../infrastructure/assets/HeartAttackLogo.png";
 import SampleImage2 from "../../../infrastructure/assets/Sample2.png";
 import SampleImage3 from "../../../infrastructure/assets/Sample3.png";
 import { useTranslation } from "react-i18next";
@@ -9,7 +9,7 @@ import LanguageSelector from "ui/components/commons/LanguageSelector/LanguageSel
 
 const imageAndLinks = [
   {
-    imageUrl: SampleImage,
+    imageUrl: HeartAttackLogo,
     linkTo: "/heart-attack",
     title: "heart_attack",
   },
