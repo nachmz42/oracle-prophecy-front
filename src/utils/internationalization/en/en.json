@@ -6,6 +6,7 @@
     "next": "Next",
     "previous": "Previous",
     "reset": "Reset",
+    "return_to": "Return",
     "submit": "Submit"
   },
   "errors": {
@@ -16,6 +17,7 @@
     "age_placeholder": "Please insert your age",
     "alcohol_consumption": "Average alcohol consumption per week",
     "alcohol_consumption_placeholder": "Please insert your average alcohol consumption per week",
+    "average": "Average",
     "bmi": "BMI",
     "bmi_placeholder": "Please insert your BMI",
     "cholesterol_level": "Cholesterol level",
@@ -32,8 +34,8 @@
       "exercise_hours_per_week": "This value should be between 0 a 164",
       "stress_level": "This value should be between 0 an 10",
       "sedentary_hours_per_day": "This value should be between 0 an 24",
-      "bmi": "You must select a gender",
-      "triglycerides": "You must select a gender",
+      "bmi": "This value should be higher than 0",
+      "triglycerides": "This value should be higher than 0",
       "physical_activity_days_per_week": "This value should be between 0 an 7",
       "sleep_hours_per_day": "This value should be between 0 an 24"
     },
@@ -48,8 +50,12 @@
     "male": "Male",
     "physical_days": "Physical activity days per week",
     "physical_days_placeholder": "Please insert your physical activity days per week",
-    "sedentary": "Sedentary hours per week",
-    "sedentary_placeholder": "Please insert your sedentary hours per week",
+    "prediction": {
+      "false": "Congratulations, the patient has been predicted to not have risk of a heart attack",
+      "true": "Attention, the patient has been predicted to be in risk of having a heart attack"
+    },
+    "sedentary": "Sedentary hours per day",
+    "sedentary_placeholder": "Please insert your sedentary hours per day",
     "sleep_per_day": "Sleep hours per day",
     "sleep_per_day_placeholder": "Please insert your sleep hours per day",
     "stress_level": "Average stress level",

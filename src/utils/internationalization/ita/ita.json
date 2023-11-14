@@ -6,6 +6,7 @@
     "next": "Avanti",
     "previous": "Precedente",
     "reset": "Resetta",
+    "return_to": "Ritorno",
     "submit": "Invia"
   },
   "errors": {
@@ -26,7 +27,7 @@
     "errors": {
       "age": "La tua età dovrebbe essere un valore maggiore di 0",
       "alcohol_consumption": "Devi inserire il consumo di alcol (maggiore di 0)",
-      "bmi": "Devi selezionare un genere",
+      "bmi": "Questo valore dovrebbe essere superiore a 0.",
       "cholesterol": "Devi inserire il livello di colesterolo",
       "diet": "Devi selezionare un tipo di dieta",
       "exercise_hours_per_week": "Questo valore dovrebbe essere compreso tra 0 e 164",
@@ -36,7 +37,7 @@
       "sleep_hours_per_day": "Questo valore dovrebbe essere compreso tra 0 e 24",
       "stress_level": "Questo valore dovrebbe essere compreso tra 0 e 10",
       "physical_activity_days_per_week": "Questo valore dovrebbe essere compreso tra 0 e 7",
-      "triglycerides": "Devi selezionare un genere"
+      "triglycerides": "Questo valore dovrebbe essere superiore a 0."
     },
     "exercise": "Ore di esercizio a settimana",
     "exercise_placeholder": "Per favore, inserisci le tue ore medie di esercizio a settimana",
@@ -49,8 +50,12 @@
     "male": "Maschile",
     "physical_days": "Giorni di attività fisica a settimana",
     "physical_days_placeholder": "Per favore, inserisci i tuoi giorni di attività fisica a settimana",
-    "sedentary": "Ore sedentarie a settimana",
-    "sedentary_placeholder": "Per favore, inserisci le tue ore sedentarie a settimana",
+    "prediction": {
+      "false": "Congratulazioni, il paziente è stato predetto senza rischio di un attacco di cuore",
+      "true": "Attenzione, il paziente è stato predetto con rischio di un attacco di cuore"
+    },
+    "sedentary": "Ore sedentarie al giorno",
+    "sedentary_placeholder": "Per favore, inserisci le tue ore sedentarie al giorno",
     "sleep_per_day": "Ore di sonno al giorno",
     "sleep_per_day_placeholder": "Per favore, inserisci le tue ore di sonno al giorno",
     "stress_level": "Livello medio di stress",

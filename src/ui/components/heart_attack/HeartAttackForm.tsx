@@ -1,10 +1,11 @@
 import {
   Button,
   Center,
+  Flex,
   FormControl,
-  FormErrorMessage,
   FormHelperText,
   FormLabel,
+  Icon,
   Input,
   Select,
 } from "@chakra-ui/react";
@@ -16,27 +17,17 @@ import { useState } from "react";
 import { CustomError } from "utils/CustomError";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
-interface ErrorsProps {
-  sex: string;
-  diet: string;
-  age: string;
-  cholesterol: string;
-  heart_rate: string;
-  alcohol_consumption: string;
-  exercise_hours_per_week: string;
-  stress_level: string;
-  sedentary_hours_per_day: string;
-  bmi: string;
-  triglycerides: string;
-  physical_activity_days_per_week: string;
-  sleep_hours_per_day: string;
-}
+import { FaHome } from "react-icons/fa";
+import PredictionModal from "../commons/PredictionModal/PredictionModal";
 
 function HeartAttackForm() {
   const [error, setError] = useState<CustomError>();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [modalBodyText, setModalBodyText] = useState<string>("");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [goodOrBadPrediction, setGoodOrBadPrediction] =
+    useState<boolean>(false);
 
   const validatePositiveInteger = (value: any) => {
     return value >= 0;
@@ -44,7 +35,12 @@ function HeartAttackForm() {
   const validateRange = (value: any, min: number, max: number) => {
     return value >= min && value <= max;
   };
-
+  const backHome = () => {
+    navigate("/");
+  };
+  const returnHere = () => {
+    setIsOpen(false);
+  };
   const formik = useFormik<FormikValues>({
     initialValues: {
       sex: "",
@@ -67,6 +63,17 @@ function HeartAttackForm() {
           ...formik.values,
         });
         const prediction = await HeartAttackPredict(data);
+        var bodyText = "no_prediction";
+        if (prediction.prediction === 0) {
+          bodyText = "heart_attack.prediction.false";
+          setGoodOrBadPrediction(true);
+        } else if (prediction.prediction === 1) {
+          bodyText = "heart_attack.prediction.true";
+          setGoodOrBadPrediction(false);
+        }
+
+        setModalBodyText(bodyText);
+        setIsOpen(true);
       } catch (error: any) {
         setError(error);
         navigate("/error", { state: { error } });
@@ -80,17 +87,34 @@ function HeartAttackForm() {
       if (!values.diet) {
         errors.diet = t("heart_attack.errors.diet");
       }
-      if (!values.age || !validatePositiveInteger(values.age)) {
+      if (
+        values.age === undefined ||
+        values.age === null ||
+        values.age === "" ||
+        !validatePositiveInteger(values.age)
+      ) {
         errors.age = t("heart_attack.errors.age");
       }
-      if (!values.cholesterol || !validatePositiveInteger(values.cholesterol)) {
+      if (
+        values.cholesterol === undefined ||
+        values.cholesterol === null ||
+        values.cholesterol === "" ||
+        !validatePositiveInteger(values.cholesterol)
+      ) {
         errors.cholesterol = t("heart_attack.errors.cholesterol");
       }
-      if (!values.heart_rate || !validatePositiveInteger(values.heart_rate)) {
+      if (
+        values.heart_rate === undefined ||
+        values.heart_rate === null ||
+        values.heart_rate === "" ||
+        !validatePositiveInteger(values.heart_rate)
+      ) {
         errors.heart_rate = t("heart_attack.errors.heart_rate");
       }
       if (
-        !values.alcohol_consumption ||
+        values.alcohol_consumption === undefined ||
+        values.alcohol_consumption === null ||
+        values.alcohol_consumption === "" ||
         !validatePositiveInteger(values.alcohol_consumption)
       ) {
         errors.alcohol_consumption = t(
@@ -98,35 +122,53 @@ function HeartAttackForm() {
         );
       }
       if (
-        !values.exercise_hours_per_week ||
+        values.exercise_hours_per_week === undefined ||
+        values.exercise_hours_per_week === null ||
+        values.exercise_hours_per_week === "" ||
         !validateRange(values.exercise_hours_per_week, 0, 164)
       ) {
         errors.exercise_hours_per_week = t(
           "heart_attack.errors.exercise_hours_per_week"
         );
       }
-      if (!values.stress_level || !validateRange(values.stress_level, 0, 10)) {
+      if (
+        values.stress_level === undefined ||
+        values.stress_level === null ||
+        values.stress_level === "" ||
+        !validateRange(values.stress_level, 0, 10)
+      ) {
         errors.stress_level = t("heart_attack.errors.stress_level");
       }
       if (
-        !values.sedentary_hours_per_day ||
+        values.sedentary_hours_per_day === undefined ||
+        values.sedentary_hours_per_day === null ||
+        values.sedentary_hours_per_day === "" ||
         !validateRange(values.sedentary_hours_per_day, 0, 24)
       ) {
         errors.sedentary_hours_per_day = t(
           "heart_attack.errors.sedentary_hours_per_day"
         );
       }
-      if (!values.bmi || !validatePositiveInteger(values.bmi)) {
+      if (
+        values.bmi === undefined ||
+        values.bmi === null ||
+        values.bmi === "" ||
+        !validatePositiveInteger(values.bmi)
+      ) {
         errors.bmi = t("heart_attack.errors.bmi");
       }
       if (
-        !values.triglycerides ||
+        values.triglycerides === undefined ||
+        values.triglycerides === null ||
+        values.triglycerides === "" ||
         !validatePositiveInteger(values.triglycerides)
       ) {
         errors.triglycerides = t("heart_attack.errors.triglycerides");
       }
       if (
-        !values.physical_activity_days_per_week ||
+        values.physical_activity_days_per_week === undefined ||
+        values.physical_activity_days_per_week === null ||
+        values.physical_activity_days_per_week === "" ||
         !validateRange(values.physical_activity_days_per_week, 0, 7)
       ) {
         errors.physical_activity_days_per_week = t(
@@ -134,7 +176,9 @@ function HeartAttackForm() {
         );
       }
       if (
-        !values.sleep_hours_per_day ||
+        values.sleep_hours_per_day === undefined ||
+        values.sleep_hours_per_day === null ||
+        values.sleep_hours_per_day === "" ||
         !validateRange(values.sleep_hours_per_day, 0, 24)
       ) {
         errors.sleep_hours_per_day = t(
@@ -149,6 +193,21 @@ function HeartAttackForm() {
 
   return (
     <>
+      <PredictionModal
+        isOpen={isOpen}
+        onClose={() => {
+          returnHere();
+        }}
+        bodyText={modalBodyText}
+        returnHome={backHome}
+        title="titles.heart_attack"
+        goodOrBad={goodOrBadPrediction}
+      ></PredictionModal>
+      <Flex>
+        <Button onClick={backHome} leftIcon={<Icon as={FaHome} />}>
+          {t("buttons.back_home")}
+        </Button>
+      </Flex>
       <Center className="heart-attack-form-container-container">
         <Center className="heart-attack-form-container">
           {" "}

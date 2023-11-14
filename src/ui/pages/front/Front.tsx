@@ -5,7 +5,7 @@ import SampleImage from "../../../infrastructure/assets/Sample1.png";
 import SampleImage2 from "../../../infrastructure/assets/Sample2.png";
 import SampleImage3 from "../../../infrastructure/assets/Sample3.png";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "ui/components/commons/LanguageSelector";
+import LanguageSelector from "ui/components/commons/LanguageSelector/LanguageSelector";
 
 const imageAndLinks = [
   {

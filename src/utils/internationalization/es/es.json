@@ -6,6 +6,7 @@
     "next": "Siguiente",
     "previous": "Anterior",
     "reset": "Reiniciar",
+    "return_to": "Volver",
     "submit": "Enviar"
   },
   "errors": {
@@ -26,7 +27,7 @@
     "errors": {
       "age": "Tu edad debe ser un valor mayor que 0",
       "alcohol_consumption": "Debes insertar tu consumo de alcohol (mayor que 0)",
-      "bmi": "Debes seleccionar un género",
+      "bmi": "Este valor debe ser mayor que 0",
       "cholesterol": "Debes insertar tu nivel de colesterol",
       "diet": "Debes seleccionar un tipo de dieta",
       "exercise_hours_per_week": "Este valor debe estar entre 0 y 164",
@@ -49,8 +50,12 @@
     "male": "Masculino",
     "physical_days": "Días de actividad física por semana",
     "physical_days_placeholder": "Por favor, ingresa tus días de actividad física por semana",
-    "sedentary": "Horas sedentarias por semana",
-    "sedentary_placeholder": "Por favor, ingresa tus horas sedentarias por semana",
+    "prediction": {
+      "false": "Felicidades, se ha predicho que el paciente no tiene riesgo de sufrir un ataque al corazón",
+      "true": "Atención, se ha predicho que el paciente tiene riesgo de sufrir un ataque al corazón"
+    },
+    "sedentary": "Horas sedentarias por día",
+    "sedentary_placeholder": "Por favor, ingresa tus horas sedentarias por día",
     "sleep_per_day": "Horas de sueño por día",
     "sleep_per_day_placeholder": "Por favor, ingresa tus horas de sueño por día",
     "stress_level": "Nivel promedio de estrés",

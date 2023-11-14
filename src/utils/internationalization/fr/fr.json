@@ -6,6 +6,7 @@
     "next": "Suivant",
     "previous": "Précédent",
     "reset": "Réinitialiser",
+    "return_to": "Retour",
     "submit": "Envoyer"
   },
   "errors": {
@@ -16,6 +17,7 @@
     "age_placeholder": "Veuillez insérer votre âge",
     "alcohol_consumption": "Consommation moyenne d'alcool par semaine",
     "alcohol_consumption_placeholder": "Veuillez insérer votre consommation moyenne d'alcool par semaine",
+    "average": "Moyenne",
     "bmi": "IMC",
     "bmi_placeholder": "Veuillez insérer votre IMC",
     "cholesterol_level": "Niveau de cholestérol",
@@ -31,8 +33,8 @@
       "exercise_hours_per_week": "Cette valeur doit être comprise entre 0 et 164",
       "stress_level": "Cette valeur doit être comprise entre 0 et 10",
       "sedentary_hours_per_day": "Cette valeur doit être comprise entre 0 et 24",
-      "bmi": "Vous devez sélectionner un genre",
-      "triglycerides": "Vous devez sélectionner un genre",
+      "bmi": "Questo valore dovrebbe essere superiore a 0.",
+      "triglycerides": "Questo valore dovrebbe essere superiore a 0.",
       "physical_activity_days_per_week": "Cette valeur doit être comprise entre 0 et 7",
       "sleep_hours_per_day": "Cette valeur doit être comprise entre 0 et 24"
     },
@@ -47,8 +49,12 @@
     "male": "Masculin",
     "physical_days": "Jours d'activité physique par semaine",
     "physical_days_placeholder": "Veuillez insérer vos jours d'activité physique par semaine",
-    "sedentary": "Heures sédentaires par semaine",
-    "sedentary_placeholder": "Veuillez insérer vos heures sédentaires par semaine",
+    "prediction": {
+      "false": "Félicitations, le patient a été prédit de ne pas avoir de risque de crise cardiaque",
+      "true": "Attention, le patient a été prédit d'avoir un risque de crise cardiaque"
+    },
+    "sedentary": "Heures sédentaires par jour",
+    "sedentary_placeholder": "Veuillez insérer vos heures sédentaires par jour",
     "sleep_per_day": "Heures de sommeil par jour",
     "sleep_per_day_placeholder": "Veuillez insérer vos heures de sommeil par jour",
     "stress_level": "Niveau moyen de stress",

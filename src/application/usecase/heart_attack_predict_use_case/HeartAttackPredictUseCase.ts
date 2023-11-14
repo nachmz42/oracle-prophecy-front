@@ -7,7 +7,7 @@ import { AxiosError, AxiosResponse } from "axios";
 export function HeartAttackPredict(heartAttackData: HeartAttackDomain): any {
   return predict(heartAttackData)
     .then((res: AxiosResponse) => {
-      HeartAttackPrediction(res.data);
+      return HeartAttackPrediction(res.data);
     })
     .catch((error: AxiosError) => {
       let code = error.code !== undefined ? error.code : "500";
